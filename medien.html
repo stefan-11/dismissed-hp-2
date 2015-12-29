@@ -56,7 +56,7 @@
 
             for (var k=0; k<currGallery.images.length; k++) {
                 var currImage = currGallery.images[k];
-                this.addImageToGalleryDiv(""+currGallery.folder+"_pure_g", currImage);
+                this.addImageToGalleryDiv(""+currGallery.folder+"_pure_g", currGallery.folder, currImage);
             };
 
         }
@@ -68,15 +68,17 @@
     /*
         This function add an image specified in the imageObject to the gallery specified by the jquery-gallery-div-handle
         Parameters:
-        galleryDiv - div-handle within which the image will be placed
+        containerId - ID of the container div in which the image should be placed
         imageObject - object which specifies the image file
 
     */
-    function addImageToGalleryDiv(containerId, imageObject){
-        var imageId = "image1";
+    function addImageToGalleryDiv(containerId, imageFolder, imageObject){
+        //var imageId = "image1";
+        var imageId = imageObject.imageId;
+        var sequenceIndex = imageObject.sequenceIndex;
         //add image at the end of the galleryDiv
         //$("#gallery_2_pure_g").append("<div id=\""+imageId+"\" class=\"pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8\"><img class=\"pure-img l-box\" src=\"http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg\" onclick=\"openPhotoSwipe();\"></div>");
-        $("#"+containerId).append("<div id=\""+imageId+"\" class=\"pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8\"><img class=\"pure-img l-box\" src=\""+imageObject.src+"\" onclick=\"openPhotoSwipe();\"></div>");
+        $("#"+containerId).append("<div id=\""+imageId+"\" class=\"pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8\"><img class=\"pure-img l-box\" src=\""+imageObject.src+"\" onclick=\"openPhotoSwipe('"+imageFolder+"', "+sequenceIndex+");\"></div>");
 
     }
 
@@ -107,7 +109,7 @@
 
 <!-- PhotoSwipe Functions -->
 <script type="text/javascript">
-var openPhotoSwipe = function() {
+var openPhotoSwipe = function(folder, imageIndex) {
     var pswpElement = document.querySelectorAll('.pswp')[0];
 
     /*
@@ -129,15 +131,26 @@ var openPhotoSwipe = function() {
     //alert(galleriesObject);
 
     //get the items-array from the global galleries object
-    var items = galleriesObject[0].images;
+    //var items = galleriesObject[0].images;
 
+    //find the gallery by the folder-name
+    var galleryFound = false;
+    var galleryCounter = 0;
+    var items = null;
+    for (var i=0; i<galleriesObject.length; i++){
+        var currGallery = galleriesObject[i];
+        if (currGallery.folder == folder) {
+            items = currGallery.images;
+            galleryFound = true;
+        };
+    }
     
     // define options (if needed)
     var options = {
         // history & focus options are disabled on CodePen        
         history: false,
         focus: false,
-        index: 0,
+        index: imageIndex,
 
         showAnimationDuration: 0,
         hideAnimationDuration: 0,
@@ -203,117 +216,6 @@ var openPhotoSwipe = function() {
                 <p>
                     When using Responsive Grids, you'll want your images to be fluid as well so they grow and shrink with the content, while maintaining the correct ratio. To do this, just add the <code>.pure-img</code> class on them. Check out the example below.
                 </p>
-            </div>
-
-            <div class="grids-example">
-                <div class="pure-g">
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store" onclick="openPhotoSwipe();">
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8">
-                    <img class="pure-img l-box" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain" onclick="openPhotoSwipe();">
-                </div>
-
-                </div>
-
             </div>
 
 
