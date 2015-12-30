@@ -134,14 +134,11 @@ var openPhotoSwipe = function(folder, imageIndex) {
     //var items = galleriesObject[0].images;
 
     //find the gallery by the folder-name
-    var galleryFound = false;
-    var galleryCounter = 0;
     var items = null;
     for (var i=0; i<galleriesObject.length; i++){
         var currGallery = galleriesObject[i];
         if (currGallery.folder == folder) {
             items = currGallery.images;
-            galleryFound = true;
         };
     }
     
