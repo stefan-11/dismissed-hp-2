@@ -21,48 +21,6 @@
 
 <!-- Dismissed CSS -->
 <link rel="stylesheet" href="css/dismissed.css">
-
-<script src="jquery/jquery-1.11.3.min.js"></script>
-    
-<script type="text/javascript">
-    
-    function setRandomStartPicture(){
-
-        var rand = Math.random();
-        var randIndex = rand * 20;
-        randIndex = Math.round(randIndex);
-
-        var imageArray = new Array();
-        imageArray[0] = "257624_173278106065035_1016856_o.jpg";
-        imageArray[1] = "dismissed_1web.jpg";
-        imageArray[2] = "dismissed_2web.jpg";
-        imageArray[3] = "dismissed_3web.jpg";
-        imageArray[4] = "dismissed_4web.jpg";
-        imageArray[5] = "dismissed_1web.jpg";
-        imageArray[6] = "dismissed_2web.jpg";
-        imageArray[7] = "dismissed_3web.jpg";
-        imageArray[8] = "dismissed_4web.jpg";
-        imageArray[9] = "dismissed_1web.jpg";
-        imageArray[10] = "dismissed_2web.jpg";
-        imageArray[11] = "dismissed_3web.jpg";
-        imageArray[12] = "dismissed_4web.jpg";
-        imageArray[13] = "dismissed_1web.jpg";
-        imageArray[14] = "dismissed_2web.jpg";
-        imageArray[15] = "dismissed_3web.jpg";
-        imageArray[16] = "dismissed_4web.jpg";
-        imageArray[17] = "dismissed_1web.jpg";
-        imageArray[18] = "dismissed_2web.jpg";
-        imageArray[19] = "dismissed_3web.jpg";
-
-        var imageSrc = imageArray[randIndex];
-
-        imageSrc = "img/" + imageSrc;
-
-        $(".start-picture").attr("src", imageSrc);        
-    }
-
-
-</script>
     
 
 </head>
@@ -98,23 +56,25 @@
 
     <div id="main">
         <div class="header">
-            <h1>dismissed</h1>
+            <h1>über uns</h1>
+            <img src="img/dismissed-banner-01.jpg" class="banner">
         </div>
 
         <div class="content">
-        <div class="spacer"></div>
-            <!--
-            <img src="img/257624_173278106065035_1016856_o.jpg" class="start-picture">
-            -->
-            <img src="img/dismissed_1web.jpg" class="start-picture">
+            <div class="spacer"></div>
+
+            <p>
+Seit über 10 Jahren spielen <b>Dismissed</b> in der Region eine nicht mehr wegzudenkende Rolle als Rockcoverband.
+Die versierten und bühnenerfahrenen Musiker aus dem Großraum Freiburg haben sich über die Jahre ein
+umfangreiches Cover-Repertoire aus dem Besten der vergangenen 30 Jahre Rockmusik aufgebaut.
+Ob auf Festivals, Rock- oder Weinfesten, Sportveranstaltungen oder Polterabenden - mit ihren bis zu 4-stündigen Auftritten begeistern sie bislang jedes Publikum.
+</p><p>
+Dabei bildet nicht nur die vielfältige Songauswahl sondern auch das Auftreten der Band selbst den Garant für einen erfolgreichen Auftritt. Auf den Groove von <b>Phil</b> (drums) und <b>Sebi</b> (bass), dem soliden Rhythmus von <b>Matze</b> (rhythm guitar) und dem Klangteppich von <b>Martin</b> (keys) sind es insbesondere die Stimmen von <b>Brom</b> und <b>Andrea</b>, welche sich nicht nur gegenseitig ergänzen, sondern auch durch Ihre beeindruckende Performance begeistern – gekrönt von den virtuosen Soloeinlagen von <b>Stefan</b> (lead guitar).
+            </p>
+
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-    setRandomStartPicture();
-</script>
 
 
 <script src="js/ui.js"></script>

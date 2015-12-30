@@ -21,48 +21,6 @@
 
 <!-- Dismissed CSS -->
 <link rel="stylesheet" href="css/dismissed.css">
-
-<script src="jquery/jquery-1.11.3.min.js"></script>
-    
-<script type="text/javascript">
-    
-    function setRandomStartPicture(){
-
-        var rand = Math.random();
-        var randIndex = rand * 20;
-        randIndex = Math.round(randIndex);
-
-        var imageArray = new Array();
-        imageArray[0] = "257624_173278106065035_1016856_o.jpg";
-        imageArray[1] = "dismissed_1web.jpg";
-        imageArray[2] = "dismissed_2web.jpg";
-        imageArray[3] = "dismissed_3web.jpg";
-        imageArray[4] = "dismissed_4web.jpg";
-        imageArray[5] = "dismissed_1web.jpg";
-        imageArray[6] = "dismissed_2web.jpg";
-        imageArray[7] = "dismissed_3web.jpg";
-        imageArray[8] = "dismissed_4web.jpg";
-        imageArray[9] = "dismissed_1web.jpg";
-        imageArray[10] = "dismissed_2web.jpg";
-        imageArray[11] = "dismissed_3web.jpg";
-        imageArray[12] = "dismissed_4web.jpg";
-        imageArray[13] = "dismissed_1web.jpg";
-        imageArray[14] = "dismissed_2web.jpg";
-        imageArray[15] = "dismissed_3web.jpg";
-        imageArray[16] = "dismissed_4web.jpg";
-        imageArray[17] = "dismissed_1web.jpg";
-        imageArray[18] = "dismissed_2web.jpg";
-        imageArray[19] = "dismissed_3web.jpg";
-
-        var imageSrc = imageArray[randIndex];
-
-        imageSrc = "img/" + imageSrc;
-
-        $(".start-picture").attr("src", imageSrc);        
-    }
-
-
-</script>
     
 
 </head>
@@ -98,23 +56,30 @@
 
     <div id="main">
         <div class="header">
-            <h1>dismissed</h1>
+            <h1>termine</h1>
+            <img src="img/dismissed-banner-01.jpg" class="banner">
         </div>
 
         <div class="content">
-        <div class="spacer"></div>
-            <!--
-            <img src="img/257624_173278106065035_1016856_o.jpg" class="start-picture">
-            -->
-            <img src="img/dismissed_1web.jpg" class="start-picture">
+            <div class="spacer"></div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-5"><p class="align-right line-height">22.08.2016</p></div>
+                <div class="pure-u-1-5"><p class="line-height">21:00</p></div>
+                <div class="pure-u-1-5"><p class="line-height">Emmendingen</p></div>
+                <div class="pure-u-2-5"><p class="line-height">Breisgauer Weinfest</p></div>
+                
+                
+                <div class="pure-u-1-5"><p class="align-right line-height">28.11.2015</p></div>
+                <div class="pure-u-1-5"><p class="line-height">23:00</p></div>
+                <div class="pure-u-1-5"><p class="line-height">Todtnau</p></div>
+                <div class="pure-u-2-5"><p class="line-height">Handballverein Todtnau / Spählochhalle</p></div>
+
+            </div>
+
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript">
-    setRandomStartPicture();
-</script>
 
 
 <script src="js/ui.js"></script>

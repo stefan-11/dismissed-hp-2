@@ -15,8 +15,6 @@
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 <!-- PhotoSwipe CSS -->
 <link rel="stylesheet" href="photoswipe/photoswipe.css"> 
-<!-- Dismissed CSS -->
-<link rel="stylesheet" href="css/dismissed.css">
 
 
 <!-- PhotoSwipe Core CSS file -->
@@ -26,6 +24,16 @@
      - .png and .svg icons sprite, 
      - preloader.gif (for browsers that do not support CSS animations) -->
 <link rel="stylesheet" href="photoswipe/default-skin/default-skin.css"> 
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/layouts/side-menu.css">
+<!--<![endif]-->
+<!-- Dismissed CSS -->
+<link rel="stylesheet" href="css/dismissed.css">
+
 <!-- PhotoSwipe Core JS file -->
 <script src="photoswipe/photoswipe.min.js"></script> 
 <!-- PhotoSwipe UI JS file -->
@@ -42,7 +50,7 @@
 
     function buildGalleries(){
 
-        alert("buildGalleries");
+        //alert("buildGalleries");
 
         for (var i=0; i<galleriesObject.length; i++){
 
@@ -98,14 +106,6 @@
 <!-- End of Gallery Functions -->
 
 
-
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/layouts/side-menu.css">
-    <!--<![endif]-->
-  
 
 <!-- PhotoSwipe Functions -->
 <script type="text/javascript">
@@ -167,7 +167,7 @@ var openPhotoSwipe = function(folder, imageIndex) {
     
 
 </head>
-<body>
+<body class="body">
 
 
 
@@ -183,24 +183,24 @@ var openPhotoSwipe = function(folder, imageIndex) {
 
     <div id="menu">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="index.html">Dismissed</a>
+            <a class="pure-menu-heading" href="index.html">dismissed</a>
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="news.html" class="pure-menu-link">news</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">über uns</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">songs</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">termine</a></li>
+                <li class="pure-menu-item"><a href="ueberuns.html" class="pure-menu-link">über uns</a></li>
+                <li class="pure-menu-item"><a href="songs.html" class="pure-menu-link">songs</a></li>
+                <li class="pure-menu-item"><a href="termine.html" class="pure-menu-link">termine</a></li>
                 <li class="pure-menu-item"><a href="medien.html" class="pure-menu-link">medien</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">kontakt</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">presse</a></li>
+                <li class="pure-menu-item"><a href="kontakt.html" class="pure-menu-link">kontakt</a></li>
+                <li class="pure-menu-item"><a href="presse.html" class="pure-menu-link">presse</a></li>
             </ul>
         </div>
     </div>
 
     <div id="main">
         <div class="header">
-            <h1>Page Title</h1>
-            <h2>A subtitle for your page goes here</h2>
+            <h1>medien</h1>
+            <img src="img/dismissed-banner-01.jpg" class="banner">
         </div>
 
         <div class="content">
