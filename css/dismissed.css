@@ -56,3 +56,6 @@ a {
 	-webkit-margin-after: 0em;
 	text-align: center;
 }
+.news-image {
+	max-width: 90%;
+}
