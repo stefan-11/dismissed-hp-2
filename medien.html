@@ -90,6 +90,8 @@
 
     }
 
+    /* load galleries via php  (this fills the galleriesObject variable */
+    /*
     $(function(){
         $.get('./galleries/galleries.php',function(data){
             console.log('success');
@@ -102,6 +104,8 @@
             console.log('error');
         });
     });
+    */
+
 </script>
 <!-- End of Gallery Functions -->
 
@@ -164,7 +168,12 @@ var openPhotoSwipe = function(folder, imageIndex) {
 //document.getElementById('btn').onclick = openPhotoSwipe;
 </script>    
 <!-- End of PhotoSwipe Functions -->
-    
+
+<!-- Galleries JSON -->
+<script src="galleries/galleries-json.js"></script> 
+
+
+
 
 </head>
 <body class="body">
@@ -204,24 +213,8 @@ var openPhotoSwipe = function(folder, imageIndex) {
         </div>
 
         <div class="content">
-            <h2 class="content-subhead">How to use this layout</h2>
-
-
-            <div class="content">
-                <h2 id="responsive-images" class="content-subhead">Responsive Images<a href="#responsive-images" class="content-link" title="Heading anchor"></a></h2>
-
-                <p>
-                    When using Responsive Grids, you'll want your images to be fluid as well so they grow and shrink with the content, while maintaining the correct ratio. To do this, just add the <code>.pure-img</code> class on them. Check out the example below.
-                </p>
-            </div>
-
-
-            <h2 class="content-subhead">Try Resizing your Browser</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-
+        
+<!--
             <h2 class="content-subhead">Gallery Test</h2>
 
             <div class="grids-example">
@@ -234,7 +227,7 @@ var openPhotoSwipe = function(folder, imageIndex) {
                 </div>
 
             </div>
-
+-->
             <!--the following tag is used as an anchor to insert the gallery-thumbs -->
             <div id="startOfGalleries"></div>
 
@@ -317,6 +310,11 @@ var openPhotoSwipe = function(folder, imageIndex) {
 
 
 
+<!-- trigger building of galleries -->
+<script type="text/javascript">
+    console.log(galleriesObject);
+    that.buildGalleries();
+</script>
 
 
 <script src="js/ui.js"></script>
