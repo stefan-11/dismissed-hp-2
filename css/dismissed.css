@@ -52,6 +52,19 @@ a.pure-menu-heading {
 .spacer {
 	height: 30px;
 }
+.date-colum-wide {
+	text-align: right;
+	margin-right: 30px;
+}
+.date-column-narrow {
+	text-align: left;
+	margin-right: 30px;
+	font-weight: bold;
+	padding-top: 30px;
+}
+.date-colum-div-wide {
+	padding-top: 20px;
+}
 .align-right {
 	text-align: right;
 	margin-right: 30px;
@@ -79,6 +92,16 @@ a.pure-menu-heading {
 }
 .news-image {
 	max-width: 90%;
+}
+.presse-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.kontakt-image {
+	border-style: solid;
+	border-width: 5px;
+	border-color: #555;
 }
 .footer {
 	text-align: center;
