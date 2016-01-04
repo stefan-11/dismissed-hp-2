@@ -37,13 +37,22 @@ var dirList = getDirectories("../galleries");
 dirList.sort();
 console.log(dirList);
 
+var galleriesObject = new Object();
+
+//loop the directories and build the galleryObject
 for (var i=0; i<dirList.length; i++){
+
+	var currDir = dirList[i];
+	currDir = galleryFolder + "/" + currDir;
+	console.log("currDir: "+currDir);
+
+	//read list of files
+	var fileList = getFilesByDirectory(currDir);
+	fileList.sort();
+	console.log(fileList);
+
 
 }
 
-//read list of files
-var fileList = getFilesByDirectory(galleryFolder);
-fileList.sort();
 
-console.log(fileList);
 
