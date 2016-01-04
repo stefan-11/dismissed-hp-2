@@ -44,10 +44,22 @@ a.pure-menu-heading {
 	width: 300px;
 }
 .start-picture {
-	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+.index-image-div-wide {
+
+}
+.index-image-div-narrow {
+	padding-left: 0em;
+	padding-right: 0em;
+}
+.index-image-wide {
+	width: 95%
+}
+.index-image-narrow {
+	width: 95%;
 }
 .spacer {
 	height: 30px;

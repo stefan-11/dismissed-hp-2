@@ -103,7 +103,6 @@
         </div>
 
         <div class="content">
-        <div class="spacer"></div>
             <!--
             <img src="img/257624_173278106065035_1016856_o.jpg" class="start-picture">
             -->
@@ -115,6 +114,37 @@
 
 <script type="text/javascript">
     setRandomStartPicture();
+</script>
+
+
+<!-- window resize handler to add/remove align-right class to grid -->
+<script type="text/javascript">
+    function setAlignRight(){
+        var windowWith = $("html").width();
+        //alert(windowWith);
+        //if witdth is > 768 then align-right is added
+        //768 is the width at which the responsive grid switches to medium
+        if (windowWith >= 768) {
+            $( ".content" ).removeClass("index-image-div-narrow");
+            $( ".content" ).addClass("index-image-div-wide");
+
+            $(".start-picture").removeClass("index-image-narrow");
+            $(".start-picture").addClass("index-image-wide");
+        } else {
+            $( ".content" ).removeClass("index-image-div-wide");
+            $( ".content" ).addClass("index-image-div-narrow");
+
+            $(".start-picture").removeClass("index-image-wide");
+            $(".start-picture").addClass("index-image-narrow");
+        };
+
+    }
+
+    $( window ).resize(function() {
+        this.setAlignRight();
+    });
+
+    this.setAlignRight();
 </script>
 
 
