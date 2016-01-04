@@ -37,7 +37,9 @@ var dirList = getDirectories("../galleries");
 dirList.sort();
 console.log(dirList);
 
+
 var galleriesObject = new Object();
+
 
 //loop the directories and build the galleryObject
 for (var i=0; i<dirList.length; i++){
