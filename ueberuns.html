@@ -21,9 +21,24 @@
     <link rel="stylesheet" href="css/layouts/side-menu.css">
 <!--<![endif]-->
 
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<!--<![endif]-->
+
+<!-- Tooltipster CSS -->
+<link rel="stylesheet" type="text/css" href="tooltipster-master/css/tooltipster.css" />
+
 <!-- Dismissed CSS -->
 <link rel="stylesheet" href="css/dismissed.css">
 
+<!-- JQuery -->
+<script src="jquery/jquery-1.11.3.min.js"></script>
+
+<!-- Tooltipster -->
+<script type="text/javascript" src="tooltipster-master/js/jquery.tooltipster.min.js"></script>
 
 </head>
 <body class="body">
@@ -80,6 +95,42 @@
             </p>
 
 
+            <div class="pure-g">
+
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-matze.png" title="matze / git">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-sebi.png" title="sebi / bass">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-andrea.png" title="andrea / vocals">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-stefan.png" title="stefan / git">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-philipp.png" title="philipp / drums">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-martin.png" title="martin / keys">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-dismissed-black.png">
+                </div>
+                
+                <div class="pure-u-1 pure-u-sm-12-24 pure-u-md-6-24">
+                    <img class="pure-img tooltip" src="img/kopf-brom.png" title="stefan / vocals">
+                </div>
+
+            </div>
+
         </div>
     </div>
 
@@ -105,6 +156,13 @@
 
 
 <script src="js/ui.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $('.tooltip').tooltipster();
+    });
+</script>
 
 
 </body>

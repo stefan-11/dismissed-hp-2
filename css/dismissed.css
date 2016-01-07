@@ -1,6 +1,8 @@
+/*
 .l-box {
 	padding: 1em;
 }
+*/
 a {
     color: #777;
 }
@@ -131,4 +133,15 @@ a.pure-menu-heading {
 }
 .footer-text {
 	font-size: x-small;
+}
+/*
+.media-image-div {
+	padding: 5px;
+}
+*/
+.name {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
 }
