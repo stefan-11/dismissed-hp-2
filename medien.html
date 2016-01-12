@@ -88,7 +88,7 @@
         var sequenceIndex = imageObject.sequenceIndex;
         //add image at the end of the galleryDiv
         //$("#gallery_2_pure_g").append("<div id=\""+imageId+"\" class=\"pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8\"><img class=\"pure-img l-box\" src=\"http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg\" onclick=\"openPhotoSwipe();\"></div>");
-        $("#"+containerId).append("<div id=\""+imageId+"\" class=\"pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8 media-image-div\"><img class=\"pure-img l-box\" src=\""+imageObject.src+"\" onclick=\"openPhotoSwipe('"+imageFolder+"', "+sequenceIndex+");\"></div>");
+        $("#"+containerId).append("<div id=\""+imageId+"\" class=\"pure-u-1-2 pure-u-md-1-4 pure-u-lg-1-8 media-image-div\"><img class=\"pure-img l-box\" src=\""+imageObject.thumb+"\" onclick=\"openPhotoSwipe('"+imageFolder+"', "+sequenceIndex+");\"></div>");
 
     }
 

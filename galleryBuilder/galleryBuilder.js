@@ -91,8 +91,15 @@ for (var i=0; i<dirList.length; i++){
 	for (var k=0; k<fileList.length; k++){
 		var currFile = fileList[k];
 		console.log("currFile: "+currFile);
+
+		var currThumb = "thumb-"+currFile;
+		console.log("currThumb:"+currThumb);
+
 		var currFileWithPath = currDir + "/" + currFile;
 		console.log(currFileWithPath);
+
+		var currThumbWithPath = currDir + "/thumbs/" + currThumb;
+		console.log(currThumbWithPath);
 
 		// check if the file is a jpg, search function returns 0 if it is
 		if (currFileWithPath.search(/.*jpg/i) == 0) {
@@ -104,6 +111,10 @@ for (var i=0; i<dirList.length; i++){
 			var adjustedFileWithPath = currFileWithPath.replace(pattern, "");
 			console.log("adjustedFileWithPath: "+adjustedFileWithPath);
 
+			//remove ../ from the thumb path
+			var pattern = /..\//i;
+			var adjustedThumbWithPath = currThumbWithPath.replace(pattern, "");
+			console.log("adjustedThumbWithPath: "+adjustedThumbWithPath);			
 
 			imagesArray[sequenceIndex] = new Object();
 			imagesArray[sequenceIndex].src = adjustedFileWithPath; // currFileWithPath;
@@ -111,6 +122,7 @@ for (var i=0; i<dirList.length; i++){
 			imagesArray[sequenceIndex].h = dimensions.height;
 			imagesArray[sequenceIndex].imageId = "image"+imageId;
 			imagesArray[sequenceIndex].sequenceIndex = sequenceIndex;
+			imagesArray[sequenceIndex].thumb = adjustedThumbWithPath;
 
 			console.log(currGalleriesObject.images[k]);
 
