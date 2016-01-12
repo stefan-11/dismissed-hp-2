@@ -1,8 +1,27 @@
-/*
+
 .l-box {
-	padding: 1em;
+	/*padding: 1em;*/
+	max-height: 200px; /*200px is default for 2-columns and is overruled for bigger media-screensizes below*/
+	align-items: center;
 }
-*/
+.pure-img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+/* the next two blocks overwrite the l-box defaults for 4 columns and 8 columns at bigger screensizeds */
+@media screen and (min-width: 48em) {
+	.pure-u-md-1-4 > img {
+		max-height: 100px;	
+	}
+}
+@media screen and (min-width: 64em) {
+	.pure-u-lg-1-8 > img {
+		max-height: 70px;
+	}
+}
+
 a {
     color: #777;
 }

@@ -43,7 +43,7 @@ process.argv.forEach(function (val, index, array) {
 console.log("hello");
 
 
-var galleryFolder = process.argv[2];
+var galleryFolder = "../galleries"; //process.argv[2];
 console.log("galleryFolder: "+galleryFolder);
 
 var targetFile = process.argv[3];
@@ -70,7 +70,7 @@ for (var i=0; i<dirList.length; i++){
 	galleriesObject[i] = new Object();
 	var currGalleriesObject = galleriesObject[i];
 
-	//remove ../galleries from the folder
+	//remove ../galleries/ from the folder
 	var dirPattern = /..\/galleries\//i;
 	var folder = currDir.replace(dirPattern, "");
 	console.log("folder: "+folder);
