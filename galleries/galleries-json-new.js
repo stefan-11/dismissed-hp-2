@@ -93,7 +93,7 @@ var galleriesObject = [
     },
     {
         "folder": "2015-06-07-Ihringen",
-        "headline": "Weinfest Ihringen - 05/06.06.20152",
+        "headline": "Weinfest Ihringen - 05/06.06.2015",
         "images": [
             {
                 "src": "galleries/2015-06-07-Ihringen/001-11232127_913051355421036_2068615014167853308_n.jpg",
