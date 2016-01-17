@@ -58,8 +58,12 @@
         var imageSrc = imageArray[randIndex];
 
         imageSrc = "img/" + imageSrc;
+        this.startPicture = imageSrc;
+        console.log(this.startPicture);
 
-        $(".start-picture").attr("src", imageSrc);        
+        //$(".start-picture").attr("src", imageSrc);        
+
+        $(".start-picture").attr("src", 'img/dismissed-background-480-730.jpg');                
     }
 
 
@@ -83,7 +87,11 @@
 
     <div id="menu">
         <div class="pure-menu">
+            <!--
+            <a class="pure-menu-heading" href="index.html"><img src="img/dismissed-background.jpg"></a>
+            -->
             <a class="pure-menu-heading" href="index.html">dismissed</a>
+            
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="news.html" class="pure-menu-link">news</a></li>
@@ -145,6 +153,25 @@
     });
 
     this.setAlignRight();
+</script>
+
+
+<script type="text/javascript">
+    
+function changeImage(){
+    console.log(this.startPicture);
+    var that = this;
+    $imgURL = $(this).attr("href");
+    $(".start-picture")
+        .fadeOut(400, function() {
+            console.log(this.startPicture);
+            $(".start-picture").attr('src',that.startPicture);
+        })
+        .fadeIn(400);
+}
+
+setTimeout(changeImage, 1000);
+
 </script>
 
 
