@@ -63,6 +63,8 @@
 
         //$(".start-picture").attr("src", imageSrc);        
 
+        //das Start-Bild wird jetzt zunächst auf background gesetzt.
+        //Ganz unten wird das dann mit einem Timer geändert auf das gerade ausgewürfelte Bild.
         $(".start-picture").attr("src", 'img/dismissed-background-480-730.jpg');                
     }
 
@@ -156,6 +158,7 @@
 </script>
 
 
+<!-- Timer zum setzen des oben ausgewürfelten Bilds (das background bild wird ersetzt) -->
 <script type="text/javascript">
     
 function changeImage(){
