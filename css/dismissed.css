@@ -166,3 +166,7 @@ a.pure-menu-heading {
 	margin-left: auto;
 	text-align: center;
 }
+.past-dates {
+	color: #777;
+	font-style: italic;
+}

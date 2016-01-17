@@ -23,13 +23,14 @@
 <link rel="stylesheet" href="css/dismissed.css">
 
 <script src="jquery/jquery-1.11.3.min.js"></script>
-    
+<script type="text/javascript" src="jquery/jquery.preload.js"></script>
+
 <script type="text/javascript">
     
     function setRandomStartPicture(){
 
         var rand = Math.random();
-        var randIndex = rand * 20;
+        var randIndex = rand * 55;
         randIndex = Math.round(randIndex);
 
         var imageArray = new Array();
@@ -95,13 +96,17 @@
 
         imageSrc = "img/start-pictures/" + imageSrc;
         this.startPicture = imageSrc;
-        console.log(this.startPicture);
+        //console.log(this.startPicture);
 
         //$(".start-picture").attr("src", imageSrc);        
 
         //das Start-Bild wird jetzt zunächst auf background gesetzt.
         //Ganz unten wird das dann mit einem Timer geändert auf das gerade ausgewürfelte Bild.
-        $(".start-picture").attr("src", 'img/dismissed-background-480-730.jpg');                
+        //$(".start-picture").attr("src", 'img/dismissed-background-480-730.jpg'); 
+
+        //$(['img/dismissed-background-480-730.jpg']).preload();   
+        //$.preload('img/dismissed-background-480-730.jpg');
+        $.preload(imageSrc);
     }
 
 
@@ -152,7 +157,7 @@
             <!--
             <img src="img/257624_173278106065035_1016856_o.jpg" class="start-picture">
             -->
-            <img src="img/dismissed_1web.jpg" class="start-picture">
+            <img src="img/dismissed-background-480-730.jpg" class="start-picture">
         </div>
     </div>
 </div>
@@ -198,12 +203,11 @@
 <script type="text/javascript">
     
 function changeImage(){
-    console.log(this.startPicture);
+    //console.log(this.startPicture);
     var that = this;
     $imgURL = $(this).attr("href");
     $(".start-picture")
         .fadeOut(400, function() {
-            console.log(this.startPicture);
             $(".start-picture").attr('src',that.startPicture);
         })
         .fadeIn(400);
