@@ -2,12 +2,11 @@
 
 
 1. Installation von node.js
-2. Installation von image-size
-	npm install image-size --save
+2. npm install
 
 
 Execute the script like this:
-node galleryBuilder.js ../galleries target.js
+node create-gallery-json.js ../galleries target.json
 
 
 */
