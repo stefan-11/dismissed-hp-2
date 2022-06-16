@@ -1,5 +1,156 @@
 var galleriesObject = [
     {
+        "folder": "2016-09-02-Gassenfest-Teningen",
+        "headline": "Gassenfest Teningen - 02.09.2016",
+        "images": [
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5499.jpg",
+                "w": 2126,
+                "h": 1417,
+                "imageId": "image120",
+                "sequenceIndex": 0,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5499.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5503.jpg",
+                "w": 2126,
+                "h": 1417,
+                "imageId": "image121",
+                "sequenceIndex": 1,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5503.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5540.jpg",
+                "w": 2126,
+                "h": 1417,
+                "imageId": "image122",
+                "sequenceIndex": 2,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5540.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5542.jpg",
+                "w": 2126,
+                "h": 1417,
+                "imageId": "image123",
+                "sequenceIndex": 3,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5542.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5548.jpg",
+                "w": 2126,
+                "h": 1417,
+                "imageId": "image124",
+                "sequenceIndex": 4,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5548.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5568.jpg",
+                "w": 2126,
+                "h": 1417,
+                "imageId": "image125",
+                "sequenceIndex": 5,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5568.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5576.jpg",
+                "w": 2126,
+                "h": 1276,
+                "imageId": "image126",
+                "sequenceIndex": 6,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5576.jpg"
+            },
+            {
+                "src": "galleries/2016-09-02-Gassenfest-Teningen/_MG_5579.jpg",
+                "w": 2126,
+                "h": 1276,
+                "imageId": "image127",
+                "sequenceIndex": 7,
+                "thumb": "galleries/2016-09-02-Gassenfest-Teningen/thumbs/thumb-_MG_5579.jpg"
+            }
+        ]
+    },
+
+
+    {
+        "folder": "2016-08-19-Weinfest-Emmendingen",
+        "headline": "Weinfest Emmendingen - 19.08.2016",
+        "images": [
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5155.jpg",
+                "w": 4866,
+                "h": 3244,
+                "imageId": "image112",
+                "sequenceIndex": 0,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5155.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5156.jpg",
+                "w": 4894,
+                "h": 3263,
+                "imageId": "image113",
+                "sequenceIndex": 1,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5156.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5164.jpg",
+                "w": 4645,
+                "h": 3097,
+                "imageId": "image114",
+                "sequenceIndex": 2,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5164.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5165.jpg",
+                "w": 4595,
+                "h": 3063,
+                "imageId": "image115",
+                "sequenceIndex": 3,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5165.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5166.jpg",
+                "w": 5166,
+                "h": 3444,
+                "imageId": "image116",
+                "sequenceIndex": 4,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5166.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5167.jpg",
+                "w": 4678,
+                "h": 3119,
+                "imageId": "image117",
+                "sequenceIndex": 5,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5167.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5170.jpg",
+                "w": 5472,
+                "h": 3648,
+                "imageId": "image118",
+                "sequenceIndex": 6,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5170.jpg"
+            },
+            {
+                "src": "galleries/2016-08-19-Weinfest-Emmendingen/_MG_5172.jpg",
+                "w": 5472,
+                "h": 3648,
+                "imageId": "image119",
+                "sequenceIndex": 7,
+                "thumb": "galleries/2016-08-19-Weinfest-Emmendingen/thumbs/thumb-_MG_5172.jpg"
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+    {
         "folder": "2015-11-28-Todtnau",
         "headline": "Rocknacht Todtnau - 28.11.2015",
         "images": [
@@ -937,4 +1088,9 @@ var galleriesObject = [
             }
         ]
     }
+
+
+
+
+
 ]
