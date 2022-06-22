@@ -1,6 +1,13 @@
 # Vorbereitung
-node.js installieren  
+1. Git installieren
+https://git-scm.com
+2. node.js installieren  (immer LTS Version nehmen, z.B. 16.15.1)
 https://nodejs.org/en/
+3. GitHub Repository auf lokal klonen. Dazu in einer Commandline (z.B. Bash, das mit Git kommt)
+```bash
+git clone https://github.com/stefan-11/dismissed-hp-2.git
+```
+Dabei wird ein neues Verzeichnis `dismissed-hp-2`angelegt.
 
 # Create Gallery JSON
 Im galleryBuilder Ordner:
